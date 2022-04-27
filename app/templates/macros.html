@@ -1,0 +1,7 @@
+{% macro displayMovieList(movie_list) %} {% for movie in movie_list %}
+<img src="{{movie.poster}}" />
+
+<li>
+  <a href="/movie/{{movie.id}}">{{movie.title|truncate(10)}}</a>
+</li>
+{% endfor %} {% endmacro %}
