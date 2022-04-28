@@ -1,5 +1,16 @@
 {% extends 'base.html' %} {% import 'macros.html' as macro %} {% block content
 %}
+<div class="">
+  <form class="">
+    <input
+      type="text"
+      name="movie_query"
+      placeholder="Search for a movie"
+      class=""
+    />
+    <input type="submit" value="Submit" class="" />
+  </form>
+</div>
 <section class="section">
   <h3 class="section-title">Popular Movies</h3>
   <div class="movie-list">{{macro.displayMovieList(popular)}}</div>

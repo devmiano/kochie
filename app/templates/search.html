@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% import 'macros.html' as macro %} {%block content %}
+<div class="">
+  <div class="">
+    <h3 class="">Found {{movies | count}} matches</h3>
+  </div>
+  <div class="">{{macro.displayMovieList(movies)}}</div>
+</div>
+{% endblock %}
