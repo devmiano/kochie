@@ -1,7 +1,7 @@
-// Google font import
+/* // Google font import */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-// Box sizing rules
+/* // Box sizing rules */
 *,
 *::before,
 *::after {
@@ -11,7 +11,7 @@
   font-size: 16px;
 }
 
-// Remove default margin
+/* // Remove default margin */
 body,
 h1,
 h2,
@@ -25,38 +25,38 @@ dd {
   margin: 0;
 }
 
-// Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
+/* // Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
 }
 
-// Set core root defaults
+/* // Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-// Set core body defaults
+/* // Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: 'Urbanist', sans-serif;
+  background-color: #0c101d;
 }
 
-// A elements that don't have a class gets default styles
+/* // A elements that don't have a class gets default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-// Make images easier to work with
+/* // Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-// Inherit fonts for inputs and buttons
+/* // Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -64,7 +64,7 @@ select {
   font: inherit;
 }
 
-// Remove all animations, transitions and smooth scroll for people that prefer not to see them
+/* // Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -80,7 +80,7 @@ select {
   }
 }
 
-// Scrollbar styles
+/* // Scrollbar styles */
 
 ::-webkit-scrollbar {
   width: 0.4rem;
@@ -105,3 +105,136 @@ $black: #151528; */
 $type-400: #31315e;
 $accent-800: #d8dcff;
 $accent-900: #aeadf0; */
+
+.app {
+  width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.section {
+  width: 100%;
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 2.369rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  color: #bdd7ef;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 2rem;
+}
+
+.movie-item {
+  width: 240px;
+  height: 360px;
+  margin: 1rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.movie-poster {
+  position: absolute;
+  width: 240px;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+}
+.movie-content {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+.movie-title {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  color: #bdd7ef;
+  font-size: 1.77rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  background: linear-gradient(
+    0deg,
+    rgba(5, 3, 17, 0.18280815744266454) 0%,
+    rgba(1, 22, 39, 0.9839286056219363) 84%
+  );
+  overflow: hidden;
+  text-align: end;
+}
+
+.movie-title:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(5, 3, 17, 0.18280815744266454) 0%,
+    rgba(1, 22, 39, 0.9839286056219363) 100%
+  );
+}
+
+.movie-details {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.movie-details-content {
+  float: right;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+}
+
+.movie-details-title {
+  color: #bdd7ef;
+  font-size: 3.157rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.movie-details-overview {
+  color: #bdd7ef;
+  font-size: 1.77rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.movie-details-votes {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.movie-details-average {
+  color: #bdd7ef;
+  font-size: 1.33rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+.movie-details-count {
+  color: #bdd7ef;
+  font-size: 1.33rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+.movie-details-span {
+  color: #bdd7ef;
+  font-size: 1.33rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}

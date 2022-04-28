@@ -1,20 +1,16 @@
-{% extends 'base.html' %} {% import 'macros.html' as macro %} {% block styles%}
-{{ super() }}
-<link
-  rel="stylesheet"
-  href="{{url_for('static',filename='styles/global.css')}}"
-/>
-{% endblock %} {% block content %}
-<h3>Popular Movies</h3>
-<ul>
-  {{macro.displayMovieList(popular)}}
-</ul>
-<h3>Upcoming Movies</h3>
-<ul>
-  {{macro.displayMovieList(upcoming)}}
-</ul>
-<h3>Now Showing</h3>
-<ul>
-  {{macro.displayMovieList(now_showing)}}
-</ul>
+{% extends 'base.html' %} {% import 'macros.html' as macro %} {% block content
+%}
+<section class="section">
+  <h3 class="section-title">Popular Movies</h3>
+  <div class="movie-list">{{macro.displayMovieList(popular)}}</div>
+</section>
+<section class="section">
+  <h3 class="section-title">Upcoming Movies</h3>
+  <div class="movie-list">{{macro.displayMovieList(upcoming)}}</div>
+</section>
+<section class="section">
+  <h3 class="section-title">Now Showing</h3>
+  <div class="movie-list">{{macro.displayMovieList(now_showing)}}</div>
+</section>
+
 {% endblock %}

@@ -1,11 +1,24 @@
 {% extends 'base.html' %} {% import 'macros.html' as macro %} {% block content
 %}
 <div
-  class="posterPath"
-  style="background: url({{movie.poster}}); height: 300px;"
-></div>
-<h1>{{movie.title}}</h1>
-<p>{{movie.overview}}</p>
-<p>{{movie.vote_average}}</p>
-<p>{{movie.vote_count}}</p>
+  class=""
+  style="background: linear-gradient(90deg, rgba(5,3,17,0.5637605383950455) 2%, rgba(1,22,39,0.950315160243785) 70%), url({{movie.poster}}); height: 100vh;
+  width: 100%; background-size: cover;
+  background-position: center;
+  "
+>
+  <div class="movie-details-content">
+    <h1 class="movie-details-title">{{movie.title}}</h1>
+    <p class="movie-details-overview">{{movie.overview}}</p>
+    <div class="movie-details-votes">
+      <p class="movie-details-average">
+        {{movie.vote_average}} <span class="movie-details-span">Rating</span>
+      </p>
+      <p class="movie-details-count">
+        {{movie.vote_count}} <span class="movie-details-span">Votes</span>
+      </p>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
